@@ -1,0 +1,47 @@
+# {
+#   user(id: "23"){
+#     firstName,
+#     age,
+#     company {
+#       id,
+#       name,
+#       description
+#     }
+#   }
+# }
+
+# {
+#   company(id: "2"){
+#     name,
+#     description,
+#     users {
+#       firstName,
+#       company {
+#         name
+#       }
+#     }
+#   }
+# }
+
+# fragment companyDetails on Company {
+#   id,
+#   name,
+#   description
+# }
+
+# {
+#   apple: company(id: "1"){
+#     ...companyDetails
+#   }
+# }
+
+
+# mutation {
+#   addUser(firstName: "Mark", age:26) {
+#     id
+#     firstName
+#     age
+#   }
+# }
+
+
